@@ -1,6 +1,6 @@
 # Justice.dev — Data & AI Engineering Portfolio
 
-[![Projects](https://img.shields.io/badge/projects-4-2563eb)](#projects)
+[![Projects](https://img.shields.io/badge/projects-8-2563eb)](#projects)
 [![Focus](https://img.shields.io/badge/focus-Snowflake%20%7C%20Python%20%7C%20Analytics-0ea5e9)](#about-this-portfolio)
 [![Safety](https://img.shields.io/badge/data-synthetic-16a34a)](docs/redaction-policy.md)
 
@@ -13,12 +13,54 @@ Public-safe examples of how I approach data platforms, analytics engineering, ob
 | If you want to see… | Start with | What it demonstrates |
 |---|---|---|
 | A working data + AI application | [ANI Mystique Demo](https://github.com/justice-doesdev/ani-mystique-demo) | Streamlit, Python, synthetic campaign analytics, optional LLM integration |
+| Recent revenue-platform work | [Revenue Analytics Access Layer](case-study-revenue-access-layer/) | Metadata-driven view deployment, contracts, schema-drift controls |
+| Recent orchestration work | [Task Orchestration Operations](case-study-task-orchestration-operations/) | Task-fleet lifecycle, run-state monitoring, failure response |
+| Recent security and governance work | [Snowflake Platform Governance](case-study-snowflake-platform-governance/) | RBAC rollout, access review, network controls, auditability |
+| Recent integration work | [Governed BI Integrations](case-study-governed-bi-integrations/) | Federation, controlled writeback, AI access boundaries |
 | Cost visibility and ownership | [Snowflake Cost Observability](guide-snowflake-cost-observability/) | Usage attribution, anomaly flags, operational review |
 | Reliable incremental pipelines | [ETL Job Hardening](guide-snowflake-etl-job-hardening/) | Streams/tasks pattern, idempotency, audit logging, recovery |
 | Trustworthy analytical data | [Data Quality Reconciliation](guide-data-quality-reconciliation/) | Reconciliation checks, exception workflow, runbook design |
 | Plain-language answers | [Portfolio FAQ](docs/faq.md) | Design choices, tradeoffs, safety, and how to review the work |
 
 ## Projects
+
+### Selected Recent Work — Sanitized Case Studies
+
+These case studies are grounded in recent Snowflake activity and rewritten with synthetic names, qualitative scale, and reusable patterns. They do not reproduce private SQL or internal architecture identifiers.
+
+#### Revenue Analytics Access Layer
+
+A metadata-driven approach for publishing a broad, consumer-friendly view surface over replicated revenue data, with deployment inventory and schema-contract checks to control the risk of projection-based compatibility views.
+
+**Signals:** Snowflake SQL · metadata-driven DDL · information schema · schema evolution · release validation
+
+[Explore the case study →](case-study-revenue-access-layer/)
+
+#### Task Orchestration Operations
+
+An operating model for a large Snowflake task estate, covering active-versus-suspended lifecycle, serverless and warehouse-backed execution, dependency graphs, skipped runs, failures, and auto-suspension.
+
+**Signals:** Snowflake tasks · orchestration · reliability · failure monitoring · operational governance
+
+[Explore the case study →](case-study-task-orchestration-operations/)
+
+#### Snowflake Platform Governance
+
+A practical governance rollout that treats roles, grants, user changes, network controls, and evidence exports as one observable operating process.
+
+**Signals:** Snowflake RBAC · least privilege · network policy · access evidence · operational controls
+
+[Explore the case study →](case-study-snowflake-platform-governance/)
+
+#### Governed BI Integrations
+
+A boundary-first design for cross-platform query access, controlled BI writeback, and optional AI features without turning an integration role into a general-purpose administrator.
+
+**Signals:** federated analytics · BI writeback · AI enablement · RBAC · data contracts
+
+[Explore the case study →](case-study-governed-bi-integrations/)
+
+### Portfolio Labs
 
 ### ANI Mystique Demo
 
@@ -71,6 +113,10 @@ Every Snowflake guide includes:
 ├── profile/README.md                       # Draft for github.com/justice-doesdev
 ├── docs/faq.md                             # Portfolio-wide FAQ
 ├── docs/redaction-policy.md                # Public-safety rules
+├── case-study-revenue-access-layer/        # Recent-work case study
+├── case-study-task-orchestration-operations/ # Recent-work case study
+├── case-study-snowflake-platform-governance/ # Recent-work case study
+├── case-study-governed-bi-integrations/    # Recent-work case study
 ├── guide-snowflake-cost-observability/     # Cost visibility lab
 ├── guide-snowflake-etl-job-hardening/      # Reliable incremental ETL lab
 ├── guide-data-quality-reconciliation/      # Data quality lab
@@ -92,4 +138,3 @@ No real employer or customer code, names, data, credentials, account identifiers
 ## FAQ
 
 The [portfolio FAQ](docs/faq.md) explains what is synthetic, why the projects are structured as guides, how the examples should be evaluated, and what I would add for a production deployment.
-
