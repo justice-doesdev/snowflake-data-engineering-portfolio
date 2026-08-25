@@ -4,6 +4,10 @@
 
 No. The Snowflake examples use synthetic object names, generic fields, example thresholds, and public-safe scenarios. They preserve engineering patterns, not private implementations.
 
+## Are the recent-work case studies based on actual Snowflake activity?
+
+Yes, at the level of engineering patterns. Read-only account metadata was used to verify that the recent work involved a broad revenue access layer, a large task estate with multiple run outcomes, governance and security administration, federation, BI writeback, and AI-related enablement. The published narratives and SQL were then written from scratch with synthetic names. They do not expose the original SQL, systems, identities, task names, schedules, object counts, dates, or business data.
+
 ## Which project should I review first?
 
 For working Python, begin with [ANI Mystique](https://github.com/justice-doesdev/ani-mystique-demo). For platform engineering, start with [ETL Job Hardening](../guide-snowflake-etl-job-hardening/). For operations and governance, start with [Cost Observability](../guide-snowflake-cost-observability/) or [Data Quality Reconciliation](../guide-data-quality-reconciliation/).
@@ -39,4 +43,3 @@ Look for clear problem framing, safe assumptions, readable SQL, intentional trad
 ## Where is the private or employer-specific work?
 
 It is not in this repository. Private details remain private; only generalized architecture and synthetic examples are published.
-
