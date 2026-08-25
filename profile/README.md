@@ -8,7 +8,7 @@ My portfolio uses synthetic examples to show the engineering decisions behind Sn
 
 | Project | What it shows | Stack |
 |---|---|---|
-| [Data & AI Engineering Portfolio](https://github.com/justice-doesdev/snowflake-data-engineering-portfolio) | Public-safe Snowflake guides, SQL patterns, runbooks, and FAQs | Snowflake SQL, data engineering, FinOps |
+| [Data & AI Engineering Portfolio](https://github.com/justice-doesdev/snowflake-data-engineering-portfolio) | Sanitized recent-work case studies, Snowflake guides, SQL patterns, runbooks, and FAQs | Snowflake SQL, data engineering, governance |
 | [ANI Mystique Demo](https://github.com/justice-doesdev/ani-mystique-demo) | An AI-assisted paid-media dashboard with synthetic data and a local fallback | Python, Streamlit, Gemini |
 
 ## How I Work
@@ -26,4 +26,3 @@ Snowflake · Python · SQL · analytics engineering · data quality · cost obse
 ## Start Here
 
 Visit the [portfolio repository](https://github.com/justice-doesdev/snowflake-data-engineering-portfolio) for a guided project index and FAQ, or open [ANI Mystique](https://github.com/justice-doesdev/ani-mystique-demo) to see a working application.
-
