@@ -1,0 +1,16 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.pem
+*.key
+*.p8
+*.log
+.streamlit/secrets.toml
+.snowflake/
+connections.toml
+
