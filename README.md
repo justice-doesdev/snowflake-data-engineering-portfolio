@@ -1,4 +1,4 @@
-# Justice.dev — Data Platform & AI Systems Engineering Portfolio
+# Vince Justice — Data Platform & AI Systems Engineering Portfolio
 
 [![Projects](https://img.shields.io/badge/projects-10-2563eb)](#projects)
 [![Focus](https://img.shields.io/badge/focus-Snowflake%20%7C%20Cortex%20AI%20%7C%20Data%20Platforms-0ea5e9)](#about-this-portfolio)
