@@ -1,10 +1,10 @@
 # Justice.dev — Data & AI Engineering Portfolio
 
-[![Projects](https://img.shields.io/badge/projects-8-2563eb)](#projects)
+[![Projects](https://img.shields.io/badge/projects-9-2563eb)](#projects)
 [![Focus](https://img.shields.io/badge/focus-Snowflake%20%7C%20Python%20%7C%20Analytics-0ea5e9)](#about-this-portfolio)
-[![Safety](https://img.shields.io/badge/data-synthetic-16a34a)](docs/redaction-policy.md)
+[![Safety](https://img.shields.io/badge/data-synthetic%20%2B%20public%20records-16a34a)](docs/redaction-policy.md)
 
-Public-safe examples of how I approach data platforms, analytics engineering, observability, and AI-assisted applications. The Snowflake labs use synthetic names and data; they demonstrate engineering patterns rather than disclose employer systems.
+Public-safe examples of how I approach data platforms, analytics engineering, observability, and AI-assisted applications. The Snowflake labs use synthetic names and data; they demonstrate engineering patterns rather than disclose employer systems. One project — the [FCC public-files pipeline](case-study-fcc-public-files-cortex/) — runs on genuine public-records data rather than synthetic data, and is labeled as such wherever it appears.
 
 > Reference implementations only. Review permissions, costs, thresholds, and operational controls before using any pattern in production.
 
@@ -13,6 +13,7 @@ Public-safe examples of how I approach data platforms, analytics engineering, ob
 | If you want to see… | Start with | What it demonstrates |
 |---|---|---|
 | A working data + AI application | [ANI Mystique Demo](https://github.com/justice-doesdev/ani-mystique-demo) | Streamlit, Python, synthetic campaign analytics, optional LLM integration |
+| Document AI over messy real documents | [FCC Public Files → Cortex](case-study-fcc-public-files-cortex/) | Cortex document parsing, classification before extraction, quality quarantine |
 | Recent revenue-platform work | [Revenue Analytics Access Layer](case-study-revenue-access-layer/) | Metadata-driven view deployment, contracts, schema-drift controls |
 | Recent orchestration work | [Task Orchestration Operations](case-study-task-orchestration-operations/) | Task-fleet lifecycle, run-state monitoring, failure response |
 | Recent security and governance work | [Snowflake Platform Governance](case-study-snowflake-platform-governance/) | RBAC rollout, access review, network controls, auditability |
@@ -61,6 +62,16 @@ A boundary-first design for cross-platform query access, controlled BI writeback
 [Explore the case study →](case-study-governed-bi-integrations/)
 
 ### Portfolio Labs
+
+### FCC Public Files → Structured Data with Snowflake Cortex
+
+A pipeline that turns scanned FCC political-advertising filings — public records, and hostile to automation — into structured order and spot-level data entirely inside Snowflake. Documents are classified before extraction, because a missing rate means one thing on an agreement form and another on a media order, and rows that fail validation are quarantined rather than published.
+
+Unlike the rest of this portfolio, this project runs on genuine public-records data rather than synthetic data. It uses only the FCC's official public API and file host.
+
+**Signals:** Snowflake Cortex · document AI · OCR quality gates · classification · external access integration · task orchestration
+
+[Explore the case study →](case-study-fcc-public-files-cortex/)
 
 ### ANI Mystique Demo
 
@@ -117,6 +128,7 @@ Every Snowflake guide includes:
 ├── case-study-task-orchestration-operations/ # Recent-work case study
 ├── case-study-snowflake-platform-governance/ # Recent-work case study
 ├── case-study-governed-bi-integrations/    # Recent-work case study
+├── case-study-fcc-public-files-cortex/     # Cortex document-AI pipeline (public records)
 ├── guide-snowflake-cost-observability/     # Cost visibility lab
 ├── guide-snowflake-etl-job-hardening/      # Reliable incremental ETL lab
 ├── guide-data-quality-reconciliation/      # Data quality lab
