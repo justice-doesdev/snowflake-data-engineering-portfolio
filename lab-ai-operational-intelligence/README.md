@@ -46,7 +46,7 @@ flowchart LR
 
 Operational questions usually cross two information shapes:
 
-1. **Structured facts** — task states, timestamps, object metadata, exception counts, credit usage, ownership, deployment versions.
+1. **Structured facts** — task states, timestamps, object metadata, exception counts, cost/usage anomalies, ownership, deployment versions.
 2. **Unstructured context** — runbooks, architectural decisions, known failure modes, escalation notes, remediation procedures.
 
 Cortex Analyst (or an equivalent governed semantic-query layer) is well suited to structured questions where metrics and relationships should be constrained by a semantic model. Cortex Search (or an equivalent retrieval layer) is better suited to documents and operational text. The agent's job is to orchestrate between them rather than force one retrieval method to solve both problems.
@@ -129,10 +129,10 @@ get_task_failures(window, domain)
 get_recent_schema_changes(object_name, window)
 get_quality_exceptions(data_product, window)
 get_dependency_context(task_name)
-get_runbook(topic)
+search_runbooks(topic)
 ```
 
-They should return structured evidence, not grant the model arbitrary SQL execution under an administrative role.
+They should return structured evidence, not grant the model arbitrary SQL execution under an administrative role. See [`tool-contracts.md`](tool-contracts.md) for the bounded interfaces and executor checks.
 
 ### 4. Approval-gated actions
 
@@ -187,7 +187,7 @@ Key dimensions:
 
 - retrieval correctness;
 - root-cause ranking;
-- evidence citation / traceability;
+- evidence traceability;
 - tool selection;
 - refusal to perform unauthorized actions;
 - approval behavior;
