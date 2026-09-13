@@ -1,0 +1,67 @@
+name: operational_intelligence
+version: 1
+
+description: >-
+  Synthetic semantic contract for governed operational questions. This file is
+  intentionally platform-neutral YAML rather than a claim of deployable
+  Snowflake syntax.
+
+entities:
+  - name: incidents
+    primary_key: incident_id
+    dimensions:
+      - name: domain
+        type: string
+      - name: status
+        type: string
+      - name: first_failure_at
+        type: timestamp
+      - name: first_failing_task
+        type: string
+      - name: leading_cause
+        type: string
+    measures:
+      - name: incident_count
+        aggregation: count
+
+  - name: task_failures
+    primary_key: failure_id
+    dimensions:
+      - name: task_name
+        type: string
+      - name: failed_at
+        type: timestamp
+      - name: error_class
+        type: string
+      - name: data_product
+        type: string
+    measures:
+      - name: failure_count
+        aggregation: count
+
+  - name: quality_exceptions
+    primary_key: exception_id
+    dimensions:
+      - name: data_product
+        type: string
+      - name: rule_name
+        type: string
+      - name: severity
+        type: string
+      - name: observed_at
+        type: timestamp
+    measures:
+      - name: exception_count
+        aggregation: count
+
+relationships:
+  - name: incident_to_task_failure
+    from: incidents.first_failing_task
+    to: task_failures.task_name
+    cardinality: many_to_one
+
+example_questions:
+  - Which workflows failed in the last four hours?
+  - Which incidents coincide with a schema change?
+  - Which data products currently have quality exceptions?
+  - What was the first failing task for the latest revenue incident?
