@@ -1,0 +1,35 @@
+{
+  "policy_version": "1.0",
+  "default_behavior": "deny",
+  "tools": [
+    {
+      "name": "get_task_failures",
+      "risk": "read_only",
+      "approval_required": false,
+      "allowed_roles": ["AI_OPS_READER"]
+    },
+    {
+      "name": "get_schema_changes",
+      "risk": "read_only",
+      "approval_required": false,
+      "allowed_roles": ["AI_OPS_READER"]
+    },
+    {
+      "name": "get_quality_exceptions",
+      "risk": "read_only",
+      "approval_required": false,
+      "allowed_roles": ["AI_OPS_READER"]
+    },
+    {
+      "name": "resume_task",
+      "risk": "state_changing",
+      "approval_required": true,
+      "allowed_roles": ["AI_OPS_EXECUTOR"],
+      "constraints": {
+        "single_target_only": true,
+        "approval_ttl_minutes": 15,
+        "require_evidence_ids": true
+      }
+    }
+  ]
+}
